@@ -71,7 +71,7 @@ namespace Angular_ASPNETCore_CustomersService
                         .WithExposedHeaders("X-InlineCount");
             }));
 
-            services.AddCors(o => o.AddPolicy("AllowSpecific", options => 
+            services.AddCors(o => o.AddPolicy("AllowSpecific", options =>
                     options.WithOrigins("http://localhost:4200")
                            .WithMethods("GET", "POST", "PUT", "PATCH", "DELETE")
                            .WithHeaders("accept", "content-type", "origin", "X-InlineCount")
@@ -83,9 +83,9 @@ namespace Angular_ASPNETCore_CustomersService
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, 
-            IWebHostEnvironment env, 
-            CustomersDbSeeder customersDbSeeder, 
+        public void Configure(IApplicationBuilder app,
+            IWebHostEnvironment env,
+            CustomersDbSeeder customersDbSeeder,
             IAntiforgery antiforgery)
         {
             if (env.IsDevelopment())
@@ -99,7 +99,7 @@ namespace Angular_ASPNETCore_CustomersService
 
             // This would need to be locked down as needed (very open right now)
             app.UseCors("AllowAllPolicy");
-            
+
             app.UseStaticFiles();
 
             // Enable middleware to serve generated Swagger as a JSON endpoint
@@ -112,7 +112,7 @@ namespace Angular_ASPNETCore_CustomersService
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
-            // Manually handle setting XSRF cookie. Needed because HttpOnly 
+            // Manually handle setting XSRF cookie. Needed because HttpOnly
             // has to be set to false so that Angular is able to read/access the cookie.
             app.Use((context, next) =>
             {
@@ -120,7 +120,7 @@ namespace Angular_ASPNETCore_CustomersService
                 if (path != null && !path.ToLower().Contains("/api"))
                 {
                     var tokens = antiforgery.GetAndStoreTokens(context);
-                    context.Response.Cookies.Append("XSRF-TOKEN", 
+                    context.Response.Cookies.Append("XSRF-TOKEN",
                         tokens.RequestToken, new CookieOptions { HttpOnly = false }
                     );
                 }
