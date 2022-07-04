@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceRoot}/Angular_ASPNETCore_Seed/bin/Debug/netcoreapp1.1/Angular_ASPNETCore_Seed.dll",
+            "program": "${workspaceRoot}/bin/Debug/netcoreapp5.0/Angular_ASPNETCore_CustomersService.dll",
             "args": [],
-            "cwd": "${workspaceRoot}/Angular_ASPNETCore_Seed",
+            "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
