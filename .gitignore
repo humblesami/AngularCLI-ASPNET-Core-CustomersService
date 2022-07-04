@@ -11,6 +11,7 @@
 .angular
 *.sqlite
 wwwroot/
+/wwwroot
 # dependencies
 node_modules
 
