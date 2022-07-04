@@ -10,8 +10,9 @@
 /Client/dist
 .angular
 *.sqlite
-wwwroot/
-/wwwroot
+wwwroot/*.js
+wwwroot/*.html
+3rdpartylicenses.txt
 # dependencies
 node_modules
 
