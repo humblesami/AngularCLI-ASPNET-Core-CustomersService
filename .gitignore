@@ -9,8 +9,8 @@
 /publish
 /Client/dist
 .angular
-.sqlite
-
+*.sqlite
+wwwroot/
 # dependencies
 node_modules
 

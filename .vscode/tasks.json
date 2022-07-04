@@ -6,10 +6,10 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "usr/bin/dotnet",
+            "command": "/usr/bin/dotnet",
             "args": [
                 "build",
-                "${workspaceRoot}/Angular_ASPNETCore_Seed/Angular_ASPNETCore_Seed.csproj"
+                "${workspaceRoot}/Angular_ASPNETCore_CustomersService.sln"
             ],
             "problemMatcher": "$msCompile",
             "group": {
