@@ -10,6 +10,7 @@
 /Client/dist
 .angular
 *.sqlite
+*.lock
 wwwroot/*.js
 wwwroot/*.html
 3rdpartylicenses.txt
